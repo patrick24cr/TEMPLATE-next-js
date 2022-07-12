@@ -12,9 +12,22 @@ const Counter = ({ counterTitle }) => {
     <>
       <h1>{counterTitle}</h1>
       <h2>{value}</h2>
-      <button type="button" onClick={handleClick}>Increment</button>
-      <button type="button" onClick={() => setValue((prevState) => prevState - 1)}>Decrement</button>
-      <button type="button" onClick={() => setValue(0)}>Reset</button>
+      <button
+        type="button"
+        onClick={handleClick}
+      >
+        Increment
+      </button>
+      <button
+        type="button"
+        disabled={value === 0}
+        onClick={() => setValue((prevState) => prevState - 1)}
+      >
+        Decrement
+      </button>
+      <button type="button" onClick={() => setValue(0)}>
+        Reset
+      </button>
     </>
   );
 };
