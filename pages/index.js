@@ -1,15 +1,20 @@
-import { useState } from 'react';
+// import { useEffect, useState } from 'react';
+// import counterData from '../api/counterData';
+import Counter from '../components/Counter';
+import data from '../utils/data/data.json';
 
 function Home() {
-  const [value, setValue] = useState(0);
+  // const [value, setValue] = useState([]);
+
+  // useEffect(() => {
+  //   counterData.then(setValue);
+  // }, []);
 
   return (
     <>
-      <h1>Counter Title</h1>
-      <h2>{value}</h2>
-      <button type="button" onClick={() => setValue((prevState) => prevState + 1)}>Increment</button>
-      <button type="button" onClick={() => setValue((prevState) => prevState - 1)}>Decrement</button>
-      <button type="button" onClick={() => setValue(0)}>Reset</button>
+      {data.map(({ title, id }) => (
+        <Counter counterTitle={title} key={id} />
+      ))}
     </>
   );
 }
