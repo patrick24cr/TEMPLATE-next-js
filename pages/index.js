@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 // import counterData from '../api/counterData';
 import Counter from '../components/Counter';
 import data from '../utils/data/data.json';
 
 function Home() {
-  const [value, setValue] = useState([]);
+  // const [value, setValue] = useState([]);
 
   // useEffect(() => {
   //   counterData.then(setValue);
